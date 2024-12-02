@@ -12,9 +12,10 @@ Anyone who has run an enterprise data organization at scale understands how diff
 
 - [**Knowledge Graph**](#the-knowledge-graph): A graph of interrelated concepts based on your model, forming the source of truth for the entire framework.
 - [**Physical Target Database Schema**](#the-physical-layer): A detailed view of how the model would look in a database, showing which parts of the graph are available to query.
+- [**Write Queries**](#write-queries): Ask a question to an LLM and get back a sql query that can answer it
 - [**SQL Test Scripts**](#sql-test-scripts): Automatically generated SQL tests to validate your data model’s integrity.
 - [**RAG-Compatible Versions**](#rag-compliant-models): Create representations of your model that are ready for vector databases and LLMs.
-- [**Natural Language to SQL**](#natural-language-to-sql): Generate question-answer pairs in natural language that can be transformed into SQL queries.
+- [**Natural Language to SQL Pairs**](#natural-language-to-sql): Generate question-answer pairs in natural language that can be transformed into SQL queries.
 - [**Data Catalog**](#data-catalog): A fully generated PDF or HTML catalog of your data model, including context from the model’s descriptions.
 - [**Expanded Logical Views**](#expanded-logical-views): Logical entities extracted from the physical schema to enhance analysis.
 - [**Observability Scripts**](#observability-scripts): Scripts to monitor and ensure the health of the data model over time.
@@ -140,6 +141,16 @@ SELECT
 FROM physical_order
 JOIN physical_customer ON order.customer_id = customer.customer_id
 JOIN physical_person ON customer.customer_id = person.person_id;
+```
+
+
+### Write Queries
+
+Ask a natural language question and use the data model to generate sql code that will answer the question.
+
+```bash
+> eloquent ask mysql What is the name of the person with person_id '12345'?
+SELECT person_name FROM logical_person WHERE person_id = '12345';
 ```
 
 ### SQL Test Scripts
