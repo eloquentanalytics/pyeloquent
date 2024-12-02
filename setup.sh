@@ -135,10 +135,4 @@ EOL
 echo "Project setup completed! Navigate to the $PROJECT_NAME directory to view your project."
 
 
-# write a file to c:\repositories\pyeloquent\location.log with the actual working directory that all the above commands were executed in
-echo "Writing location.log..."
-echo $(pwd)
-
-
-
 read -p "Press any key to continue..."

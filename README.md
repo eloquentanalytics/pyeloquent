@@ -1,8 +1,12 @@
-# **eloquent**: A unified semantic data modeling language designed for the age of LLMs. 
+# **Eloquent**: A unified semantic data modeling language designed for the age of LLMs. 
 
 *Use natural language to describe your data in a markdown-like format and generate various products from it.*
 
 **Author's Note**: Eloquent grew from my experience with very large enterprise data architectures and I've been evolving it based on real experiences with clients. If you choose to use Eloquent, any experience you can share about using the language, how it feels, where it behaves unexpectedly or where it appears redundant is much appreciated. Contributions of additional output products are gladly accepted under a "only we can make a SAAS version of this" license.
+
+--
+
+# Products
 
 - [**Knowledge Graph**](#the-knowledge-graph): A graph of interrelated concepts based on your model, forming the source of truth for the entire framework.
 - [**Physical Target Database Schema**](#the-physical-layer): A detailed view of how the model would look in a database, showing which parts of the graph are available to query.
@@ -17,6 +21,20 @@
 - **DBT-Compatible Data Models**: Generate models that integrate seamlessly with DBT for transformation workflows.
 - **External Data Governance**: Sync the model with external tools like Microsoft Purview or Collibra
 - **VSCode Extension**: Syntax highlighting and linting for VSCode
+
+---
+
+## 🛆 Installation
+
+You can install **Eloquent** directly from PyPI:
+
+```bash
+pip install pyeloquent
+```
+
+---
+
+## 💡 Usage
 
 This is an Eloquent data model:
 
@@ -218,5 +236,72 @@ Generate a visual representation of the model that can be used to understand the
 ### Data Catalog
 
 Generate a data catalog that contains all the information in the model plus additional context from the descriptions as either a PDF or a collection of HTML pages. This can be used to understand the data model and how it can be navigated and attractively printed.
+
+
+## 🥞 Testing
+
+To run the test suite:
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/eloquentanalytics/pyeloquent.git
+    ```
+
+2. Install development dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Run the tests:
+
+    ```bash
+    pytest
+    ```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix:
+
+    ```bash
+    git checkout -b feature-name
+    ```
+
+3. Make your changes and commit them with a clear message.
+4. Submit a pull request.
+
+Please see the `CONTRIBUTING.md` file for detailed guidelines.
+
+---
+
+## 📄 License
+
+**Eloquent** is licensed under the Business Source License 1.1 (BSL 1.1).
+
+Certain usage restrictions apply. For details, see the `LICENSE` file.
+
+---
+
+## 🗒️ Changelog
+
+See the `CHANGELOG.md` file for details on new features, bug fixes, and updates.
+
+---
+
+## 🛩️ Contact
+
+For questions, feedback, or support, feel free to reach out:
+
+- **GitHub Issues**: Submit an issue
+- **Email**: philip@eloquentanalytics.com
+
+
+
 
 
