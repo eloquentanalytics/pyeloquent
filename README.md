@@ -68,7 +68,6 @@ Customer
 - Zipcode
 Order
 - Order Date
-- Customer
 - Customer Zipcode
 - Customer Person
 - Customer Person Name
