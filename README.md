@@ -73,7 +73,7 @@ Order
 - Customer Person
 - Customer Person Name
 Customers make Orders
-A Customer is a Person who has made at least one Order
+A Person with at least one Order is a Customer
 ```
 
 ### The Physical Layer
@@ -108,6 +108,7 @@ CREATE TABLE physical_person (
 CREATE TABLE physical_customer (
   customer_id VARCHAR(255) PRIMARY KEY,
   customer_zipcode VARCHAR(255)
+  FOREIGN KEY (customer_id) REFERENCES physical_person(person_id)
 );
 
 CREATE TABLE physical_order (
