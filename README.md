@@ -24,16 +24,6 @@
 
 ---
 
-## 🛆 Installation
-
-You can install **Eloquent** directly from PyPI:
-
-```bash
-pip install pyeloquent
-```
-
----
-
 ## 💡 Usage
 
 This is an Eloquent data model:
