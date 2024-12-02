@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyeloquent"
+version = "0.1.0"
+description = "A Python library for machine learning workflows."
+authors = [{name = "Your Name", email = "youremail@example.com"}]
+license = {file = "LICENSE"}
+dependencies = []

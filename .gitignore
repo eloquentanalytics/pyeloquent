@@ -1,0 +1,12 @@
+# Byte-compiled files
+__pycache__/
+*.pyc
+*.pyo
+
+# Distribution files
+dist/
+build/
+*.egg-info/
+
+# Environment files
+.env
