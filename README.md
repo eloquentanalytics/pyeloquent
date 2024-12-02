@@ -57,12 +57,15 @@ The core list of the concepts and their relationships. This is the source of tru
 > eloquent describe graph
 Person
 - Name
+
 Customer
 - Zipcode
+
 Order
 - Order Date
 - Customer Zipcode
 - Customer Person Name
+
 Customers make Orders
 A Person with at least one Order is a Customer
 ```
@@ -76,9 +79,11 @@ What the knowledge graph would look like if it was backed by a database. You can
 physical_person
 - person_id: String
 - person_name: String
+
 physical_customer
 - customer_id: String
 - customer_zipcode: String
+
 physical_order
 - order_id: String
 - order_date: Date
@@ -194,9 +199,11 @@ Expand on the model's explicit definitions to include additional context that is
 > eloquent describe rag
 **Person**: A person or organization
 - Person has a Name
+
 **Customer**: A person or organization that buys products
 - Customer is a Person with at least one Order
 - Customer has a Zipcode like '10000'
+
 **Order**: A record of a customer's purchase of one or more products
 - Order has a Customer
 - Order must have an Order Date in the past
