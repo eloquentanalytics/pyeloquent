@@ -4,7 +4,7 @@
 
 **Author's Note**: Eloquent grew from my experience with very large enterprise data architectures and I've been evolving it based on real experiences with clients. If you choose to use Eloquent, any experience you can share about using the language, how it feels, where it behaves unexpectedly or where it appears redundant is much appreciated. Contributions of additional output products are gladly accepted under a "only we can make a SAAS version of this" license.
 
---
+---
 
 # Products
 
