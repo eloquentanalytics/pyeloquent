@@ -4,7 +4,7 @@
 
 Anyone who has run an enterprise data organization at scale understands how difficult it is to keep metadata updated and synced with all the various databases, data products, semantic layers, monitoring, catalogs, external BI tools and now RAG-based large language models. If only there was a single data modeling language that could generated everything that would need to update as code. That model would be very Eloquent.
 
-**Author's Note**: Eloquent grew from my experience with very large enterprise data architectures and I've been evolving it based on real experiences with clients. If you choose to use Eloquent, any experience you can (share)[#contact] about using the language, how it feels, where it behaves unexpectedly or where it appears redundant is much appreciated. Contributions of additional output products are welcome, see [Contributing](#contributing).
+**Author's Note**: Eloquent grew from my experience with very large enterprise data architectures and I've been evolving it based on real experiences with clients. If you choose to use Eloquent, any experience you can [share](#contact) about using the language, how it feels, where it behaves unexpectedly or where it appears redundant is much appreciated. Contributions of additional output products are welcome, see [Contributing](#contributing).
 
 ---
 
