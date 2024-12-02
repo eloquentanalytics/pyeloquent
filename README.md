@@ -61,7 +61,6 @@ Customer
 Order
 - Order Date
 - Customer Zipcode
-- Customer Person
 - Customer Person Name
 Customers make Orders
 A Person with at least one Order is a Customer
