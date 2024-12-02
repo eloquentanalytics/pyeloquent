@@ -237,6 +237,7 @@ Generate a visual representation of the model that can be used to understand the
 
 Generate a data catalog that contains all the information in the model plus additional context from the descriptions as either a PDF or a collection of HTML pages. This can be used to understand the data model and how it can be navigated and attractively printed.
 
+---
 
 ## 🥞 Testing
 
