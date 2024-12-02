@@ -149,8 +149,8 @@ JOIN physical_person ON customer.customer_id = person.person_id;
 Ask a natural language question and use the data model to generate sql code that will answer the question.
 
 ```bash
-> eloquent ask mysql What is the name of the person with person_id '12345'?
-SELECT person_name FROM logical_person WHERE person_id = '12345';
+> eloquent ask mysql What is the total number of orders placed by customers in zipcode '10000'?
+SELECT COUNT(*) FROM logical_order WHERE customer_zipcode = '10000';
 ```
 
 ### SQL Test Scripts
