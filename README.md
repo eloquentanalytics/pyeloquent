@@ -123,29 +123,30 @@ Generate views that create a layer of logical entities that are more useful for 
 > eloquent create logical mysql
 CREATE VIEW logical_person AS
 SELECT
-  person_id,
-  person_name
+  physical_person.person_id,
+  physical_person.person_name
 FROM physical_person;
 
 CREATE VIEW logical_customer AS
 SELECT
-  customer_id,
-  customer_zipcode,
-  person_id,
-  person_name
-FROM physical_customer;
+  physical_customer.customer_id,
+  physical_customer.customer_zipcode,
+  physical_person.person_id,
+  physical_person.person_name
+FROM physical_customer
+JOIN physical_person on physical_customer.customer_id = physical_person.person_id;
 
 CREATE VIEW logical_order AS
 SELECT
-  order_id,
-  order_date,
-  customer_id,
-  customer_zipcode,
-  person_id,
-  person_name
+  physical_order.order_id,
+  physical_order.order_date,
+  physical_customer.customer_id,
+  physical_customer.customer_zipcode,
+  physical_person.person_id,
+  physical_person.person_name
 FROM physical_order
-JOIN physical_customer ON order.customer_id = customer.customer_id
-JOIN physical_person ON customer.customer_id = person.person_id;
+JOIN physical_customer ON physical_order.customer_id = physical_customer.customer_id
+JOIN physical_person ON physical_customer.customer_id = physical_person.person_id;
 ```
 
 
