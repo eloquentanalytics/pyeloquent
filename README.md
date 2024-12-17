@@ -1,12 +1,28 @@
 # **Eloquent**: A unified semantic data modeling language designed for the age of LLMs. 
 
-*Use natural language to describe your data in a markdown-like format and generate various products from it.*
+*Use natural language to describe your data in a markdown-like format and run your entire data strategy on it.*
 
-Anyone who has run an enterprise data organization at scale understands how difficult it is to keep metadata updated and synced with all the various databases, data products, semantic layers, monitoring, catalogs, external BI tools and now RAG-based large language models. If only there was a single data modeling language that could generated everything that would need to update as code. 
+**Note**: *While I am implementing this process at several enterprise clients, this is more of a design document that outlines the direction I want to take the more publicly available version. Suggestions and feedback is encouraged either as an issue here or reach out to me directly to philip at eloquent analytics dot com.*
 
-**Author's Note**: Eloquent grew from my experience with very large enterprise data architectures and I've been evolving it based on real experiences with clients. If you choose to use Eloquent, any experience you can [share](#contact) about using the language, how it feels, where it behaves unexpectedly or where it appears redundant is much appreciated. Contributions of additional output products are welcome, see [Contributing](#contributing).
+Anyone who has run an enterprise data organization at scale understands how difficult it is to organize what data is available and keep metadata updated and synced with all the various databases, data products, semantic layers, monitoring, catalogs, external BI tools and now RAG-based large language models. Eloquent is a modeling language designed to cover all these use cases with just a single bit of markdown. 
 
----
+```markdown
+**Person**: A person or organization
+- Person has a Name
+- Customer is a Person with at least one Order
+
+**Customer**: A person or organization that buys products
+- Customer has a Zipcode like '10000'
+
+**Order**: A record of a customer's purchase of one or more products
+- Order has a Customer
+- Order must have an Order Date in the past
+
+**Order Date**: The date the order was placed
+- Order Date is a Date
+```
+
+Hidden in this semi-structured text is a wealth of information that can be used to model a semantic data architecture. AI code editors pick up on this pattern very easily which makes modelling much more pleasent. From it we can start to manifest the model in different ways.
 
 # Products
 
@@ -28,26 +44,6 @@ Anyone who has run an enterprise data organization at scale understands how diff
 ---
 
 ## 💡 Usage
-
-This is an Eloquent data model:
-
-```markdown
-**Person**: A person or organization
-- Person has a Name
-- Customer is a Person with at least one Order
-
-**Customer**: A person or organization that buys products
-- Customer has a Zipcode like '10000'
-
-**Order**: A record of a customer's purchase of one or more products
-- Order has a Customer
-- Order must have an Order Date in the past
-
-**Order Date**: The date the order was placed
-- Order Date is a Date
-```
-
-A markdown-like syntax represents the metadata in a semi-structured text format. AI code editors pick up on this pattern very easily which makes modelling much more pleasent. From it we can start to manifest the model in different ways.
 
 ### The Knowledge Graph
 
@@ -214,7 +210,7 @@ Expand on the model's explicit definitions to include additional context that is
 
 ### Aggregations and Metrics Matrix
 
-Apply a standard set of transformations, aggregations and metrics to the logical views to drive reporting and analytics. Future versions of Eloquent will include a way to specify non-default versions of these.
+Apply a standard set of transformations, aggregations and metrics to the logical views to drive reporting and analytics. 
 
 ```bash
 > eloquent create matrix mysql
